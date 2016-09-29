@@ -1,0 +1,1 @@
+file pada versi 1.0, masih segar dan bisa dipakai di versi 1.1
