@@ -3,7 +3,7 @@ require_once 'app_info.php';
 
 // Lakukan CURL untuk get data dari server/API
 $curl_handle = curl_init();
-curl_setopt($curl_handle, CURLOPT_URL, 'http://blog.binadarma.ac.id/ramadhansutejo/demo/update/');
+curl_setopt($curl_handle, CURLOPT_URL, 'http://your-server/service_to/update_information'); //ex: http://myapp.id/update
 curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1); 
 $response = curl_exec($curl_handle);
 curl_close($curl_handle);
