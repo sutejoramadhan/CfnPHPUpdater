@@ -30,14 +30,16 @@ if ($result->update_status == TRUE)
 	{
 		echo "Aplikasi/Sistem sudah dalam versi terbaru";
 	}
-
-	echo "Update sistem tersedia, versi sistem saat ini: ".$appInfo['curent_version'].". Update ke versi ".$result->update_version."<br><br>";
-	echo '
-		<form action="system_update.php" method="POST">
-		<input name="file_name" type="hidden" value="'.$result->file_name.'">
-		<button type="submit" name="update" value="'.$result->update_link.'">Update</button>
-		<form>
-	';
+	else
+	{
+		echo "Update sistem tersedia, versi sistem saat ini: ".$appInfo['curent_version'].". Update ke versi ".$result->update_version."<br><br>";
+		echo '
+			<form action="system_update.php" method="POST">
+			<input name="file_name" type="hidden" value="'.$result->file_name.'">
+			<button type="submit" name="update" value="'.$result->update_link.'">Update</button>
+			<form>
+		';
+	}
 } 
 else 
 {
